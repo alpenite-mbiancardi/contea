@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: Jahia
+Built-By: root
+Implementation-Version: 1.0
+depends: default, grid, welcomeModule, news, faq, publication, AlpeniteTeaFAQ, AlpeniteTeaModulistica, AlpeniteTeaModulisticaPersonal
+module-type: templatesSet
+package-name: tea-template-final
+root-folder: tea-template-final

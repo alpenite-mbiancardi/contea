@@ -1,0 +1,28 @@
+<form id="documentaleListaDocumenti" action="">
+	<table class="documentale tbl">
+		<thead>
+			<tr class="title">
+				<th class="society"     ></th>
+				<th class="document"    ><fmt:message key="alpeniteteadocumentale.visualizza.scarica" /></th>
+				<th class="documentType"><fmt:message key="alpeniteteadocumentale.visualizza.tipoDocumento" /></th>
+				<th class="comune"      ><fmt:message key="alpeniteteadocumentale.visualizza.comune" /></th>
+				<th class="date"		><fmt:message key="alpeniteteadocumentale.ricerca.datamod" />	</th>
+				<th class="checkBox"   style="padding:5px" ><input type="checkbox" onclick="checkedAct(this)"></th>
+			</tr>
+		</thead>
+		<tbody>
+				<c:forEach items="${listQuery.nodes}" var="contenitoreDocumento" begin="${offset}" end="${end}" varStatus="counter">
+					<c:choose>
+						<c:when test="${displayPager}">
+							<pager:item>
+								<template:module node="${contenitoreDocumento}" view="riga" />
+							</pager:item>
+						</c:when>
+						<c:otherwise>
+							<template:module node="${contenitoreDocumento}" view="riga" />
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+		</tbody>
+	</table>
+</form>

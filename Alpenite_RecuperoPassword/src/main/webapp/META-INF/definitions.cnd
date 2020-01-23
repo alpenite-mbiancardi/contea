@@ -1,0 +1,15 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:recuperoPassword] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged, jmix:basicContent
+- userredirectpage (weakreference, picker[type="page"]) mandatory < jnt:page
+- verificationPage (weakreference, picker[type="page"]) mandatory < jnt:page
+- toAdministrator (boolean)=false autocreated indexed=no
+- from (string) mandatory
+- subject(string) i18n mandatory
+- group (string) mandatory
+- mail (string, richtext) i18n mandatory
+
+[jnt:confermaRecuperoPassword] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged, jmix:basicContent
+- group (string) mandatory
+- userredirectpage (weakreference, picker[type="page"]) mandatory < jnt:page

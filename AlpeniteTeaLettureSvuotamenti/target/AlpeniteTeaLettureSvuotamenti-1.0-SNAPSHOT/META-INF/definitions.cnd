@@ -1,0 +1,13 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:letture] > jnt:content, jmix:structuredContent
+- tipoLettura (string, choicelist[resourceBundle]) < gas, acqua, teleriscaldamento
+- anniPrima (long)
+
+[jnt:svuotamenti] > jnt:content, jmix:structuredContent
+- anniPrima (long)
+
+[jnt:sacchetti] > jnt:content, jmix:structuredContent
+- anniPrima (long)
+

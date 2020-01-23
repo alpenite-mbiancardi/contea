@@ -1,0 +1,11 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:datiUtentePortale] > jnt:content, jmix:structuredContent
+- mailVerificationPage (weakreference, picker[type="page"]) mandatory < jnt:page 
+- from (string) mandatory
+- cc (string)
+- bcc (string)
+- subject (string) i18n
+- mail (string, richtext) i18n
+- redirectPage (weakreference, picker[type="page"]) mandatory < jnt:page 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean class="com.alpenite.tea.elencoDocumenti.ElencoDocumenti">
+        <property name="name" value="elencoDocumenti"/>
+    </bean>
+     <bean class="com.alpenite.tea.elencoDocumenti.ElencoDocumentiGen">
+        <property name="name" value="elencoDocumentiGen"/>
+    </bean>
+    <bean class="com.alpenite.tea.elencoDocumenti.ElencoDocumentiCerca">
+        <property name="name" value="elencoDocumentiCerca"/>
+    </bean>
+    <bean class="com.alpenite.tea.elencoDocumenti.ElencoDocumenti1">
+        <property name="name" value="elencoDocumenti1"/>
+    </bean>
+</beans>

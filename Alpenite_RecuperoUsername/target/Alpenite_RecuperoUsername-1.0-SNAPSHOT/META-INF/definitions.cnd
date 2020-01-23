@@ -1,0 +1,9 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:recuperoUsername] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged, jmix:basicContent
+- userRedirectPage (weakreference, picker[type="page"]) mandatory < jnt:page
+- group (string)
+- from (string) mandatory
+- mailSubject (string) i18n mandatory
+- mail (string, richtext) i18n mandatory

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Built-By: marziobiancardi
+Build-Jdk: 1.7.0_80
+Created-By: Maven Integration for Eclipse
+Implementation-Title: AlpeniteTeaRicercaStrumenti
+Implementation-URL: 
+Implementation-Vendor: 
+Implementation-Vendor-Id: 
+Implementation-Version: 2.0
+Specification-Title: AlpeniteTeaRicercaStrumenti
+Specification-Vendor: 
+Specification-Version: 2.0
+depends: Default Jahia Templates
+module-type: module
+package-name: AlpeniteTeaRicercaStrumenti
+root-folder: AlpeniteTeaCustomSearch
+

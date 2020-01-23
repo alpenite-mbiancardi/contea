@@ -1,0 +1,25 @@
+
+<jcr:sql var="nodiResult" sql="SELECT * FROM [jnt:file] WHERE [jnt:file].[jcr:uuid] = '${hit.properties['file'].string}'"/>
+<c:forEach items="${nodiResult.nodes}" var="u">
+    <c:set var="file" value="${u}" />
+</c:forEach>
+
+
+
+<li class="${hit.properties['type'].string}">
+
+    <a href="${file.url}" class="download"><fmt:message key="search.form.download" /></a>
+    <h3>
+        <c:if test="${!empty hit.properties['title'].string}">
+            ${hit.properties['title'].string}
+        </c:if>
+    </h3>
+    <a href="${file.url}">
+        <c:if test="${!empty hit.properties['subtitle'].string}">
+            ${hit.properties['subtitle'].string}
+        </c:if>
+    </a>
+    
+<fmt:formatNumber var='num' pattern="### ### ###.##" type="number" value="${(file.fileContent.contentLength/1024)}" />
+<span> (${num} KB)</span>
+</li>

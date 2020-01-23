@@ -1,0 +1,31 @@
+#moduloDomiciliazioneBancaria fieldset {
+    padding: 5px;
+}
+
+#moduloDomiciliazioneBancaria legend {
+    margin: 10px;
+}
+
+#moduloDomiciliazioneBancaria label {
+    display: inline-block;
+    width: 120px;
+}
+
+#moduloDomiciliazioneBancaria input {
+/*    display: block;*/
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#moduloDomiciliazioneBancaria #footer {
+    text-align: center;
+    margin: 10px;
+}
+
+.obbligatorio.nonCompleto {
+    background-color: salmon;
+}
+.obbligatorio.completo {
+    background-color: lightgreen;
+}
+

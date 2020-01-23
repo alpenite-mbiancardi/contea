@@ -1,0 +1,23 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:tipoDocumento] > jnt:content, jmix:siteComponent
+ - id   (string)
+ - name (string) i18n
+ 
+[jnt:contenitoreDocumento] > jnt:content, jmix:siteComponent
+ - id            (string)
+ - comune        (string)
+ - tipoDocumento (weakreference)//, picker[type="jnt:tipoDocumento"])
+ - societa       (string)
+ + *             (jnt:file)
+
+[jnt:formInserimentoDocumento] > jnt:content, jmix:formContent
+
+[jnt:bottoniVisualizzazioneDocumenti] > jnt:content
+ 
+[jnt:visualizzazioneDocumenti] > jnt:content, jmix:queryContent, jmix:list
+ - pageSize     (long)    = 10   autocreated
+ - displayPager (boolean) = true autocreated
+ - nbOfPages    (long)    = 10   autocreated
+ + actionPrivilegiate (jnt:bottoniVisualizzazioneDocumenti) = jnt:bottoniVisualizzazioneDocumenti autocreated

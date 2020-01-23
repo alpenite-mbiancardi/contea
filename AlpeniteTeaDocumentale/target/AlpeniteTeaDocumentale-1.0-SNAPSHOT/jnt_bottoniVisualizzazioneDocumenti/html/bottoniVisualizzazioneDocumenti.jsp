@@ -1,0 +1,4 @@
+<%@ taglib prefix="fmt"      uri="http://java.sun.com/jsp/jstl/fmt"      %>
+
+<input class="btn medium" id="cancellaSelezionati" type="submit" value="<fmt:message key='alpeniteteadocumentale.visualizza.cancellaSelezionati'/>" onclick='if(confirm("<fmt:message key='alpeniteteadocumentale.conferma.cancellaSelezionati'/>")) esegui("documentaleEliminaDocumento")'/>
+<input class="btn medium" id="emailSelezionati"    type="submit" value="<fmt:message key='alpeniteteadocumentale.visualizza.emailSelezionati'   />" onclick='if(confirm("<fmt:message key='alpeniteteadocumentale.conferma.emailSelezionati'   />")) esegui("documentaleInvioEmail")'      />

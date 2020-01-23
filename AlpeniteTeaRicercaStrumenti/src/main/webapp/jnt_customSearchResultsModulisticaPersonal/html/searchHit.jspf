@@ -1,0 +1,25 @@
+
+<jcr:sql var="nodiResult" sql="SELECT * FROM [jnt:file] WHERE [jnt:file].[jcr:uuid] = '${hit.properties['file'].string}'"/>
+<c:forEach items="${nodiResult.nodes}" var="u">
+    <c:set var="file" value="${u}" />
+</c:forEach>
+<jcr:sql var="nodiResult" sql="SELECT * FROM [jnt:file] WHERE [jnt:file].[jcr:uuid] = '${hit.properties['image'].string}'"/>
+<c:forEach items="${nodiResult.nodes}" var="u">
+    <c:set var="image" value="${u}" />
+</c:forEach>
+
+<li>
+    <span class="img">
+        <c:if test="${!empty image.path}">
+            <c:url  var="imageUrl" value="${url.files}${image.path}"/>
+            <img src="${imageUrl}" alt="${newsTitleEscaped}" width="69" height="77"/>
+        </c:if>
+    </span>
+    <a href="${file.url}" class="download"><fmt:message key="search.form.download" /></a>
+    <h3><fmt:message key="search.form.generic" /></h3>
+<c:if test="${!empty hit.properties['title'].string}">
+    <a href="${file.url}">${hit.properties['title'].string}</a>
+</c:if>
+<fmt:formatNumber var="num" pattern="### ### ###.##" type="number" value="${(file.fileContent.contentLength/1024)}"/>
+<span> (${num} KB)</span>
+</li>

@@ -1,0 +1,9 @@
+linguaPredefinita=en
+
+usernameISU=CONTEA.PRD
+passwordISU=MQzGpWcFgH
+pathWSDLISU=p-isu-a3.teaspa.lan.8037.xml
+
+usernameCRM=CONTEA.CRP
+passwordCRM=o58sNnDBsq
+pathWSDLCRM=p-crp-a3.teaspa.lan.8037.xml

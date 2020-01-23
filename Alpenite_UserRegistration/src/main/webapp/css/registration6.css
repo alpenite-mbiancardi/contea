@@ -1,0 +1,25 @@
+div#container{
+	width: 100%;
+}
+div.split2 div{
+    float: left;
+    width: 46%;
+    padding: 0 2%
+}
+div.wide{
+	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	clear: left; padding: 0 2%
+}
+div.border{
+	/*border-bottom: 1px solid #FFF*/
+}
+label{  
+	width:200px; 
+}
+
+.label{
+	width:150px;
+	min-width:150px;
+	float:left;
+}

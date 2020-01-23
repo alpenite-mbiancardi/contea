@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-Install and Deploy</actionName>
+            <displayName>Install and Deploy</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>jahia:undeploy</goal>
+                <goal>jahia:deploy</goal>
+            </goals>
+            <properties>
+                <skipTests>true</skipTests>
+            </properties>
+        </action>
+    </actions>

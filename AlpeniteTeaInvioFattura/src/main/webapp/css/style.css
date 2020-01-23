@@ -1,0 +1,14 @@
+#invioFatture #header {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+#invioFatture .campo {
+    display: inline-block;
+    width: 150px;
+}
+
+#invioFatture #footer {
+    display: inline;
+}

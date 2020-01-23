@@ -1,0 +1,9 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:AlpeniteTeaModulisticaPersonal] > jnt:content, jmix:editorialContent, mix:title, jmix:structuredContent
+ - title    (string) i18n
+ - subtitle (string) i18n
+ - file     (weakreference, picker[type='file']) i18n
+ - image    (weakreference, picker[type='image'])
+ - type     (string, choicelist[resourceBundle]) < luce,acqua,tlr,rifiuti,gas,servizio,pozzo,generali,scadenzario,igiene

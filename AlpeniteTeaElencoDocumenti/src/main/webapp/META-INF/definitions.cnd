@@ -1,0 +1,41 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:elencoDocumenti] > jnt:content, jmix:structuredContent
+- visualizzaRicerca (boolean)=true
+- anniPrima (long)
+- tipoDocumento (string, choicelist[resourceBundle]) < partiteAperte, fatture, estrattoConto
+- paginaScaricamentoFile (weakreference, picker[type="page"]) mandatory < jnt:page
+- scaricamentoMultiplo (boolean)=true
+- nomeFileArchivio (string)=documenti
+
+[jnt:scaricaDocumento] > jnt:content, jmix:structuredContent
+
+[jnt:pagaOnline] > jnt:content, jmix:structuredContent
+
+[jnt:pagaOnlineOk] > jnt:content, jmix:structuredContent
+
+[jnt:visualizzaFattura] > jnt:content, jmix:structuredContent
+
+[jnt:customTabular] > jnt:content, jmix:layoutComponentContent
+ orderable
++ * (jnt:contentList)
+- numTab (string, choicelist[resourceBundle]) <  "tab2","tab3"
+
+[jnt:elencoDocumentiGen] > jnt:content, jmix:structuredContent
+- visualizzaRicerca (boolean)=true
+- paginaScaricamentoFile (weakreference, picker[type="page"]) mandatory < jnt:page
+- scaricamentoMultiplo (boolean)=true
+- nomeFileArchivio (string)=documenti
+- partiteAperte (boolean)
+- fatture (boolean)
+
+[jnt:elencoDocumentiCerca] > jnt:content, jmix:structuredContent
+- visualizzaRicerca (boolean)=true
+- paginaScaricamentoFile (weakreference, picker[type="page"]) mandatory < jnt:page
+- scaricamentoMultiplo (boolean)=true
+- nomeFileArchivio (string)=documenti
+- partiteAperte (boolean)
+- fatture (boolean)
+
+

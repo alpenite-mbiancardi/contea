@@ -1,0 +1,14 @@
+.dettagliContratto #header {
+    font-weight: bold;
+}
+
+.dettagliContratto .label, .dettagliContratto .dati {
+    display: inline-block;
+}
+
+.dettagliContratto .label {
+    font-weight: bold;
+    width: 180px;
+    border-right: 1px solid black;
+    margin-right: 5px;
+}

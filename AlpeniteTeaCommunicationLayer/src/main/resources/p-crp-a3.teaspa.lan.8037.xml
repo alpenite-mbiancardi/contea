@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n1="urn:sap-com:document:sap:rfc:functions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:sap-com:document:sap:soap:functions:mc-style" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+   <wsdl:documentation>
+      <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl" />
+   </wsdl:documentation>
+   <wsp:UsingPolicy wsdl:required="true" />
+   <wsp:Policy wsu:Id="BN__zbn_crm_portal">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+            <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+            <wsp:All>
+               <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+                  <wsp:Policy>
+                     <sp:TransportToken>
+                        <wsp:Policy>
+                           <sp:HttpsToken>
+                              <wsp:Policy>
+                                 <sp:HttpBasicAuthentication />
+                              </wsp:Policy>
+                           </sp:HttpsToken>
+                        </wsp:Policy>
+                     </sp:TransportToken>
+                     <sp:AlgorithmSuite>
+                        <wsp:Policy>
+                           <sp:Basic128Rsa15 />
+                        </wsp:Policy>
+                     </sp:AlgorithmSuite>
+                     <sp:Layout>
+                        <wsp:Policy>
+                           <sp:Strict />
+                        </wsp:Policy>
+                     </sp:Layout>
+                  </wsp:Policy>
+               </sp:TransportBinding>
+            </wsp:All>
+         </wsp:All>
+         <wsp:All>
+            <saptrnbnd:OptimizedXMLTransfer xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" />
+            <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+            <wsp:All>
+               <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+                  <wsp:Policy>
+                     <sp:TransportToken>
+                        <wsp:Policy>
+                           <sp:HttpsToken>
+                              <wsp:Policy>
+                                 <sp:HttpBasicAuthentication />
+                              </wsp:Policy>
+                           </sp:HttpsToken>
+                        </wsp:Policy>
+                     </sp:TransportToken>
+                     <sp:AlgorithmSuite>
+                        <wsp:Policy>
+                           <sp:Basic128Rsa15 />
+                        </wsp:Policy>
+                     </sp:AlgorithmSuite>
+                     <sp:Layout>
+                        <wsp:Policy>
+                           <sp:Strict />
+                        </wsp:Policy>
+                     </sp:Layout>
+                  </wsp:Policy>
+               </sp:TransportBinding>
+            </wsp:All>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="BN__zbn_crm_portal_soap12">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrnbnd:OptimizedMimeSerialization xmlns:saptrnbnd="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" wsp:Optional="true" />
+            <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+            <wsp:All>
+               <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+                  <wsp:Policy>
+                     <sp:TransportToken>
+                        <wsp:Policy>
+                           <sp:HttpsToken>
+                              <wsp:Policy>
+                                 <sp:HttpBasicAuthentication />
+                              </wsp:Policy>
+                           </sp:HttpsToken>
+                        </wsp:Policy>
+                     </sp:TransportToken>
+                     <sp:AlgorithmSuite>
+                        <wsp:Policy>
+                           <sp:Basic128Rsa15 />
+                        </wsp:Policy>
+                     </sp:AlgorithmSuite>
+                     <sp:Layout>
+                        <wsp:Policy>
+                           <sp:Strict />
+                        </wsp:Policy>
+                     </sp:Layout>
+                  </wsp:Policy>
+               </sp:TransportBinding>
+            </wsp:All>
+         </wsp:All>
+         <wsp:All>
+            <saptrnbnd:OptimizedXMLTransfer xmlns:saptrnbnd="http://www.sap.com/webas/710/soap/features/transportbinding/" uri="http://xml.sap.com/2006/11/esi/esp/binxml" wsp:Optional="true" />
+            <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" wsp:Optional="true" />
+            <wsp:All>
+               <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702" xmlns:sapsp="http://www.sap.com/webas/630/soap/features/security/policy" xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:wst="http://docs.oasis-open.org/ws-sx/ws-trust/200512" xmlns:wsu="http://schemas.xmlsoap.org/ws/2002/07/utility" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex">
+                  <wsp:Policy>
+                     <sp:TransportToken>
+                        <wsp:Policy>
+                           <sp:HttpsToken>
+                              <wsp:Policy>
+                                 <sp:HttpBasicAuthentication />
+                              </wsp:Policy>
+                           </sp:HttpsToken>
+                        </wsp:Policy>
+                     </sp:TransportToken>
+                     <sp:AlgorithmSuite>
+                        <wsp:Policy>
+                           <sp:Basic128Rsa15 />
+                        </wsp:Policy>
+                     </sp:AlgorithmSuite>
+                     <sp:Layout>
+                        <wsp:Policy>
+                           <sp:Strict />
+                        </wsp:Policy>
+                     </sp:Layout>
+                  </wsp:Policy>
+               </sp:TransportBinding>
+            </wsp:All>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="IF__ZWS_CRM_PORTAL">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <sapsession:Session xmlns:sapsession="http://www.sap.com/webas/630/soap/features/session/">
+               <sapsession:enableSession>false</sapsession:enableSession>
+            </sapsession:Session>
+            <sapcentraladmin:CentralAdministration xmlns:sapcentraladmin="http://www.sap.com/webas/700/soap/features/CentralAdministration/" wsp:Optional="true">
+               <sapcentraladmin:BusinessApplicationID>BE2A7C6C98051ED4A1B95BE6E4F70A05</sapcentraladmin:BusinessApplicationID>
+            </sapcentraladmin:CentralAdministration>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptBpTypeGet">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptAddMail">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptBuildingList">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptServiceRequestCreate">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptSrList">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptCheckProspect">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptDeleteUsername">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptBpChange">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptCheckUsername">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptCheckMandAndRevocation">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptCreateUsername">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptGetBpFromCc">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptUploadDocs">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptActivityCreate">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptCreateProspect">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsp:Policy wsu:Id="OP__ZptReadBp">
+      <wsp:ExactlyOne>
+         <wsp:All>
+            <saptrhnw05:required xmlns:saptrhnw05="http://www.sap.com/NW05/soap/features/transaction/">no</saptrhnw05:required>
+            <sapcomhnd:enableCommit xmlns:sapcomhnd="http://www.sap.com/NW05/soap/features/commit/">false</sapcomhnd:enableCommit>
+            <sapblock:enableBlocking xmlns:sapblock="http://www.sap.com/NW05/soap/features/blocking/">true</sapblock:enableBlocking>
+            <saprmnw05:enableWSRM xmlns:saprmnw05="http://www.sap.com/NW05/soap/features/wsrm/">false</saprmnw05:enableWSRM>
+         </wsp:All>
+      </wsp:ExactlyOne>
+   </wsp:Policy>
+   <wsdl:types>
+      <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+         <xsd:simpleType name="char1">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="1" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char10">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="10" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char12">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="12" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char2">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="2" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char20">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="20" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char220">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="220" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char241">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="241" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char3">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="3" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char30">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="30" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char32">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="32" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char4">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="4" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char40">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="40" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char5">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="5" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char50">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="50" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char6">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="6" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char60">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="60" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char8">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="8" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="date10">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="10" />
+               <xsd:pattern value="\d\d\d\d-\d\d-\d\d" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="numeric1">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="1" />
+               <xsd:pattern value="\d*" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="numeric2">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="2" />
+               <xsd:pattern value="\d*" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="numeric3">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="3" />
+               <xsd:pattern value="\d*" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="string">
+            <xsd:restriction base="xsd:string" />
+         </xsd:simpleType>
+         <xsd:simpleType name="time">
+            <xsd:restriction base="xsd:time">
+               <xsd:pattern value="[0-9]{2}:[0-9]{2}:[0-9]{2}" />
+            </xsd:restriction>
+         </xsd:simpleType>
+      </xsd:schema>
+      <xsd:schema xmlns:n0="urn:sap-com:document:sap:rfc:functions" attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:soap:functions:mc-style">
+         <xsd:import namespace="urn:sap-com:document:sap:rfc:functions" />
+         <xsd:simpleType name="RfcException.Message.Number">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="3" />
+               <xsd:pattern value="\d*" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="byte16">
+            <xsd:restriction base="xsd:base64Binary">
+               <xsd:maxLength value="16" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char1">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="1" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char10">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="10" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char128">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="128" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char2">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="2" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char20">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="20" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char255">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="255" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="char50">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="50" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:simpleType name="numeric12">
+            <xsd:restriction base="xsd:string">
+               <xsd:maxLength value="12" />
+               <xsd:pattern value="\d*" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:complexType name="ZptStMess">
+            <xsd:sequence>
+               <xsd:element name="Id" type="n0:char20" />
+               <xsd:element name="MsgNumber" type="n0:numeric3" />
+               <xsd:element name="Type" type="n0:char1" />
+               <xsd:element name="Message" type="n0:char220" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptStCond">
+            <xsd:sequence>
+               <xsd:element name="PartnerNumber" type="n0:char10" />
+               <xsd:element name="NameGrp1" type="n0:char40" />
+               <xsd:element name="NameGrp2" type="n0:char40" />
+               <xsd:element name="Country" type="n0:char3" />
+               <xsd:element name="Region" type="n0:char3" />
+               <xsd:element name="City1" type="n0:char40" />
+               <xsd:element name="City2" type="n0:char40" />
+               <xsd:element name="PostCode1" type="n0:char10" />
+               <xsd:element name="Street" type="n0:char60" />
+               <xsd:element name="Housenum" type="n0:char10" />
+               <xsd:element name="Housenum2" type="tns:char10" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptStBpData">
+            <xsd:sequence>
+               <xsd:element name="PartnerNumber" type="n0:char10" />
+               <xsd:element name="BpType" type="n0:char4" />
+               <xsd:element name="Name" type="n0:char40" />
+               <xsd:element name="Surname" type="n0:char40" />
+               <xsd:element name="Role" type="n0:char50" />
+               <xsd:element name="Telephone" type="n0:char30" />
+               <xsd:element name="Cellphone" type="n0:char30" />
+               <xsd:element name="Country" type="n0:char3" />
+               <xsd:element name="Region" type="n0:char3" />
+               <xsd:element name="City1" type="n0:char40" />
+               <xsd:element name="City2" type="n0:char40" />
+               <xsd:element name="Cap" type="n0:char10" />
+               <xsd:element name="Street" type="n0:char60" />
+               <xsd:element name="Housenum" type="n0:char10" />
+               <xsd:element name="Housenum2" type="tns:char10" />
+               <xsd:element name="Prvcy" type="n0:char1" />
+               <xsd:element name="PrvcyMail" type="n0:char1" />
+               <xsd:element name="PrvcyEmail" type="n0:char1" />
+               <xsd:element name="PrvcyTel" type="n0:char1" />
+               <xsd:element name="NameOrg1" type="n0:char40" />
+               <xsd:element name="NameOrg2" type="n0:char40" />
+               <xsd:element name="NameOrg3" type="n0:char40" />
+               <xsd:element name="NameOrg4" type="n0:char40" />
+               <xsd:element name="Cf" type="n0:char20" />
+               <xsd:element name="Pi" type="n0:char20" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptStDc">
+            <xsd:sequence>
+               <xsd:element name="CityAmm" type="n0:char40" />
+               <xsd:element name="CityCat" type="n0:char40" />
+               <xsd:element name="Codcat" type="n0:char5" />
+               <xsd:element name="Sezurb" type="n0:char2" />
+               <xsd:element name="Part" type="n0:char5" />
+               <xsd:element name="Parttav" type="n0:char10" />
+               <xsd:element name="Tppart" type="n0:char1" />
+               <xsd:element name="Subalt" type="n0:char4" />
+               <xsd:element name="Zfoglio" type="n0:char4" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptStRecapito">
+            <xsd:sequence>
+               <xsd:element name="Country" type="n0:char3" />
+               <xsd:element name="Region" type="n0:char3" />
+               <xsd:element name="City1" type="n0:char40" />
+               <xsd:element name="City2" type="n0:char40" />
+               <xsd:element name="Cap" type="n0:char10" />
+               <xsd:element name="Street" type="n0:char60" />
+               <xsd:element name="Housenum" type="n0:char10" />
+               <xsd:element name="Housenum2" type="tns:char10" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZbinariesS">
+            <xsd:sequence>
+               <xsd:element name="Zfile" type="xsd:base64Binary" />
+               <xsd:element name="BinaryFlg" type="tns:char1" />
+               <xsd:element name="FileName" type="tns:char255" />
+               <xsd:element name="Mimetype" type="tns:char128" />
+               <xsd:element name="FileSize" type="tns:numeric12" />
+               <xsd:element name="IArchiveid" type="tns:char2" />
+               <xsd:element name="IDoctype" type="tns:char20" />
+               <xsd:element name="IArobj" type="tns:char10" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptStSr">
+            <xsd:sequence>
+               <xsd:element name="ObjectId" type="n0:char10" />
+               <xsd:element name="Status" type="n0:char50" />
+               <xsd:element name="Type" type="n0:char50" />
+               <xsd:element name="Opendate" type="n0:date10" />
+               <xsd:element name="Closedate" type="n0:date10" />
+               <xsd:element name="QuestionText" type="n0:string" />
+               <xsd:element name="AnswerTest" type="n0:string" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="RfcException.Message">
+            <xsd:sequence>
+               <xsd:element name="ID" type="xsd:string" />
+               <xsd:element name="Number" type="tns:RfcException.Message.Number" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptGetBpFromCc.RfcException">
+            <xsd:sequence>
+               <xsd:element name="Name" type="tns:ZptGetBpFromCc.RfcExceptions" />
+               <xsd:element name="Text" type="xsd:string" minOccurs="0" />
+               <xsd:element name="Message" type="tns:RfcException.Message" minOccurs="0" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptTtMess">
+            <xsd:sequence>
+               <xsd:element name="item" type="tns:ZptStMess" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptTtCond">
+            <xsd:sequence>
+               <xsd:element name="item" type="tns:ZptStCond" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptTtBpData">
+            <xsd:sequence>
+               <xsd:element name="item" type="tns:ZptStBpData" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZbinariesT">
+            <xsd:sequence>
+               <xsd:element name="item" type="tns:ZbinariesS" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="ZptTtSr">
+            <xsd:sequence>
+               <xsd:element name="item" type="tns:ZptStSr" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:simpleType name="ZptGetBpFromCc.RfcExceptions">
+            <xsd:restriction base="xsd:string">
+               <xsd:enumeration value="NotFound" />
+            </xsd:restriction>
+         </xsd:simpleType>
+         <xsd:element name="ZptGetBpFromCc.Exception" type="tns:ZptGetBpFromCc.RfcException" />
+         <xsd:element name="ZptAddMail">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IEmail" type="n0:char241" minOccurs="0" />
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptAddMailResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBpTypeGet">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IPartner" type="n0:char10" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBpTypeGetResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="ESapType" type="tns:char1" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBuildingList">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBuildingListResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtCondominii" type="tns:ZptTtCond" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptServiceRequestCreate">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="ICateg1" type="n0:char40" minOccurs="0" />
+                  <xsd:element name="ICateg2" type="n0:char40" minOccurs="0" />
+                  <xsd:element name="IInterloc" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="IJahiaType" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="INumciv" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="INumcivExtension" type="tns:char10" minOccurs="0" />
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="IText" type="n0:string" minOccurs="0" />
+                  <xsd:element name="ITypSr" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="IVertrag" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="IVkont" type="n0:char12" minOccurs="0" />
+                  <xsd:element name="IsBp" type="tns:ZptStBpData" minOccurs="0" />
+                  <xsd:element name="IsCond" type="tns:ZptStCond" minOccurs="0" />
+                  <xsd:element name="IsDc" type="tns:ZptStDc" minOccurs="0" />
+                  <xsd:element name="IsRec" type="tns:ZptStRecapito" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptServiceRequestCreateResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="ESrId" type="tns:char50" />
+                  <xsd:element name="ESrNum" type="tns:byte16" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckProspect">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IBpType" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="IMail" type="n0:char241" minOccurs="0" />
+                  <xsd:element name="IPi" type="n0:char20" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckProspectResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptDeleteUsername">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptDeleteUsernameResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EPartner" type="n0:char10" />
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBpChange">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IJahiaType" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="ItBpData" type="tns:ZptTtBpData" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptBpChangeResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckUsername">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IBpType" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="ICc" type="n0:char12" minOccurs="0" />
+                  <xsd:element name="ICf" type="n0:char20" minOccurs="0" />
+                  <xsd:element name="IMail" type="n0:char241" minOccurs="0" />
+                  <xsd:element name="IPi" type="n0:char20" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckUsernameResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EPartner" type="n0:char10" />
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCreateUsername">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IBpType" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="ICc" type="n0:char12" minOccurs="0" />
+                  <xsd:element name="ICf" type="n0:char20" minOccurs="0" />
+                  <xsd:element name="IMail" type="n0:char241" minOccurs="0" />
+                  <xsd:element name="IPi" type="n0:char20" minOccurs="0" />
+                  <xsd:element name="IUnlock" type="n0:char1" minOccurs="0" />
+                  <xsd:element name="IUsername" type="n0:char20" minOccurs="0" />
+                  <xsd:element name="ItBpData" type="tns:ZptTtBpData" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCreateUsernameResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EName" type="n0:char40" />
+                  <xsd:element name="EPartner" type="n0:char10" />
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="ESurname" type="n0:char40" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptGetBpFromCc">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="ICc" type="n0:char12" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptGetBpFromCcResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EPartner" type="n0:char10" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptUploadDocs">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EtBin" type="tns:ZbinariesT" />
+                  <xsd:element name="IBp" type="n0:char10" />
+                  <xsd:element name="ICc" type="n0:char12" />
+                  <xsd:element name="IsRevoke" type="tns:char1" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptUploadDocsResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCreateProspect">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IMail" type="n0:char241" minOccurs="0" />
+                  <xsd:element name="IUsername" type="n0:char20" minOccurs="0" />
+                  <xsd:element name="ItBpData" type="tns:ZptTtBpData" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCreateProspectResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EName" type="n0:char40" />
+                  <xsd:element name="EPartner" type="n0:char10" />
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="ESurname" type="n0:char40" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptReadBp">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IAzienda" type="n0:char1" minOccurs="0" />
+                  <xsd:element name="IJahiaType" type="n0:char4" />
+                  <xsd:element name="IPartner" type="n0:char10" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptReadBpResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EEmail" type="n0:char241" />
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EsBp" type="tns:ZptStBpData" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptActivityCreate">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="Category" type="n0:char3" minOccurs="0" />
+                  <xsd:element name="ContFct" type="n0:char8" minOccurs="0" />
+                  <xsd:element name="ContNo" type="n0:char32" minOccurs="0" />
+                  <xsd:element name="DateFro" type="n0:date10" minOccurs="0" />
+                  <xsd:element name="DateTo" type="n0:date10" minOccurs="0" />
+                  <xsd:element name="Descript" type="n0:char40" minOccurs="0" />
+                  <xsd:element name="Direct" type="n0:char1" minOccurs="0" />
+                  <xsd:element name="Logsys" type="n0:char10" minOccurs="0" />
+                  <xsd:element name="Object" type="n0:char3" minOccurs="0" />
+                  <xsd:element name="Pdate" type="n0:date10" minOccurs="0" />
+                  <xsd:element name="Priority" type="n0:numeric1" minOccurs="0" />
+                  <xsd:element name="Proctype" type="n0:char4" minOccurs="0" />
+                  <xsd:element name="RespFct" type="n0:char8" minOccurs="0" />
+                  <xsd:element name="RespNo" type="n0:char32" minOccurs="0" />
+                  <xsd:element name="TimeFro" type="n0:time" minOccurs="0" />
+                  <xsd:element name="TimeTo" type="n0:time" minOccurs="0" />
+                  <xsd:element name="Tzone" type="n0:char6" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptActivityCreateResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EGuid" type="n0:char32" />
+                  <xsd:element name="EObjectId" type="n0:char10" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckMandAndRevocation">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="ICc" type="n0:char12" />
+                  <xsd:element name="IPartner" type="n0:char10" />
+                  <xsd:element name="IsMndActive" type="tns:char1" minOccurs="0" />
+                  <xsd:element name="IsSrZs09" type="tns:char1" minOccurs="0" />
+                  <xsd:element name="IsSrZs10" type="tns:char1" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptCheckMandAndRevocationResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptSrList">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="IDateFrom" type="n0:date10" minOccurs="0" />
+                  <xsd:element name="IDateTo" type="n0:date10" minOccurs="0" />
+                  <xsd:element name="IPartner" type="n0:char10" minOccurs="0" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+         <xsd:element name="ZptSrListResponse">
+            <xsd:complexType>
+               <xsd:sequence>
+                  <xsd:element name="EReturn" type="n0:numeric2" />
+                  <xsd:element name="EtMess" type="tns:ZptTtMess" />
+                  <xsd:element name="EtSr" type="tns:ZptTtSr" />
+               </xsd:sequence>
+            </xsd:complexType>
+         </xsd:element>
+      </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="ZptAddMail">
+      <wsdl:part name="parameters" element="tns:ZptAddMail" />
+   </wsdl:message>
+   <wsdl:message name="ZptAddMailResponse">
+      <wsdl:part name="parameter" element="tns:ZptAddMailResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptBpTypeGet">
+      <wsdl:part name="parameters" element="tns:ZptBpTypeGet" />
+   </wsdl:message>
+   <wsdl:message name="ZptBpTypeGetResponse">
+      <wsdl:part name="parameter" element="tns:ZptBpTypeGetResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptBuildingList">
+      <wsdl:part name="parameters" element="tns:ZptBuildingList" />
+   </wsdl:message>
+   <wsdl:message name="ZptBuildingListResponse">
+      <wsdl:part name="parameter" element="tns:ZptBuildingListResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptServiceRequestCreate">
+      <wsdl:part name="parameters" element="tns:ZptServiceRequestCreate" />
+   </wsdl:message>
+   <wsdl:message name="ZptServiceRequestCreateResponse">
+      <wsdl:part name="parameter" element="tns:ZptServiceRequestCreateResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckProspect">
+      <wsdl:part name="parameters" element="tns:ZptCheckProspect" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckProspectResponse">
+      <wsdl:part name="parameter" element="tns:ZptCheckProspectResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptDeleteUsername">
+      <wsdl:part name="parameters" element="tns:ZptDeleteUsername" />
+   </wsdl:message>
+   <wsdl:message name="ZptDeleteUsernameResponse">
+      <wsdl:part name="parameter" element="tns:ZptDeleteUsernameResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptBpChange">
+      <wsdl:part name="parameters" element="tns:ZptBpChange" />
+   </wsdl:message>
+   <wsdl:message name="ZptBpChangeResponse">
+      <wsdl:part name="parameter" element="tns:ZptBpChangeResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckUsername">
+      <wsdl:part name="parameters" element="tns:ZptCheckUsername" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckUsernameResponse">
+      <wsdl:part name="parameter" element="tns:ZptCheckUsernameResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptCreateUsername">
+      <wsdl:part name="parameters" element="tns:ZptCreateUsername" />
+   </wsdl:message>
+   <wsdl:message name="ZptCreateUsernameResponse">
+      <wsdl:part name="parameter" element="tns:ZptCreateUsernameResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptGetBpFromCc">
+      <wsdl:part name="parameters" element="tns:ZptGetBpFromCc" />
+   </wsdl:message>
+   <wsdl:message name="ZptGetBpFromCcResponse">
+      <wsdl:part name="parameter" element="tns:ZptGetBpFromCcResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptGetBpFromCc.Exception">
+      <wsdl:part name="ZptGetBpFromCc.Exception" element="tns:ZptGetBpFromCc.Exception" />
+   </wsdl:message>
+   <wsdl:message name="ZptUploadDocs">
+      <wsdl:part name="parameters" element="tns:ZptUploadDocs" />
+   </wsdl:message>
+   <wsdl:message name="ZptUploadDocsResponse">
+      <wsdl:part name="parameter" element="tns:ZptUploadDocsResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptCreateProspect">
+      <wsdl:part name="parameters" element="tns:ZptCreateProspect" />
+   </wsdl:message>
+   <wsdl:message name="ZptCreateProspectResponse">
+      <wsdl:part name="parameter" element="tns:ZptCreateProspectResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptReadBp">
+      <wsdl:part name="parameters" element="tns:ZptReadBp" />
+   </wsdl:message>
+   <wsdl:message name="ZptReadBpResponse">
+      <wsdl:part name="parameter" element="tns:ZptReadBpResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptActivityCreate">
+      <wsdl:part name="parameters" element="tns:ZptActivityCreate" />
+   </wsdl:message>
+   <wsdl:message name="ZptActivityCreateResponse">
+      <wsdl:part name="parameter" element="tns:ZptActivityCreateResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckMandAndRevocation">
+      <wsdl:part name="parameters" element="tns:ZptCheckMandAndRevocation" />
+   </wsdl:message>
+   <wsdl:message name="ZptCheckMandAndRevocationResponse">
+      <wsdl:part name="parameter" element="tns:ZptCheckMandAndRevocationResponse" />
+   </wsdl:message>
+   <wsdl:message name="ZptSrList">
+      <wsdl:part name="parameters" element="tns:ZptSrList" />
+   </wsdl:message>
+   <wsdl:message name="ZptSrListResponse">
+      <wsdl:part name="parameter" element="tns:ZptSrListResponse" />
+   </wsdl:message>
+   <wsdl:portType name="ZWS_CRM_PORTAL">
+      <wsp:Policy>
+         <wsp:PolicyReference URI="#IF__ZWS_CRM_PORTAL" />
+      </wsp:Policy>
+      <wsdl:operation name="ZptAddMail">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptAddMail" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptAddMail" />
+         <wsdl:output message="tns:ZptAddMailResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpTypeGet">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptBpTypeGet" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptBpTypeGet" />
+         <wsdl:output message="tns:ZptBpTypeGetResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptBuildingList">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptBuildingList" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptBuildingList" />
+         <wsdl:output message="tns:ZptBuildingListResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptServiceRequestCreate">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptServiceRequestCreate" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptServiceRequestCreate" />
+         <wsdl:output message="tns:ZptServiceRequestCreateResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckProspect">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptCheckProspect" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptCheckProspect" />
+         <wsdl:output message="tns:ZptCheckProspectResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptDeleteUsername">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptDeleteUsername" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptDeleteUsername" />
+         <wsdl:output message="tns:ZptDeleteUsernameResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpChange">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptBpChange" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptBpChange" />
+         <wsdl:output message="tns:ZptBpChangeResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckUsername">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptCheckUsername" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptCheckUsername" />
+         <wsdl:output message="tns:ZptCheckUsernameResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateUsername">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptCreateUsername" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptCreateUsername" />
+         <wsdl:output message="tns:ZptCreateUsernameResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptGetBpFromCc">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptGetBpFromCc" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptGetBpFromCc" />
+         <wsdl:output message="tns:ZptGetBpFromCcResponse" />
+         <wsdl:fault name="ZptGetBpFromCc.Exception" message="tns:ZptGetBpFromCc.Exception" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptUploadDocs">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptUploadDocs" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptUploadDocs" />
+         <wsdl:output message="tns:ZptUploadDocsResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateProspect">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptCreateProspect" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptCreateProspect" />
+         <wsdl:output message="tns:ZptCreateProspectResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptReadBp">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptReadBp" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptReadBp" />
+         <wsdl:output message="tns:ZptReadBpResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptActivityCreate">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptActivityCreate" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptActivityCreate" />
+         <wsdl:output message="tns:ZptActivityCreateResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckMandAndRevocation">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptCheckMandAndRevocation" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptCheckMandAndRevocation" />
+         <wsdl:output message="tns:ZptCheckMandAndRevocationResponse" />
+      </wsdl:operation>
+      <wsdl:operation name="ZptSrList">
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP__ZptSrList" />
+         </wsp:Policy>
+         <wsdl:input message="tns:ZptSrList" />
+         <wsdl:output message="tns:ZptSrListResponse" />
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="zbn_crm_portal" type="tns:ZWS_CRM_PORTAL">
+      <wsp:Policy>
+         <wsp:PolicyReference URI="#BN__zbn_crm_portal" />
+      </wsp:Policy>
+      <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+      <wsdl:operation name="ZptAddMail">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptAddMailRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpTypeGet">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBpTypeGetRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBuildingList">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBuildingListRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptServiceRequestCreate">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptServiceRequestCreateRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckProspect">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckProspectRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptDeleteUsername">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptDeleteUsernameRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpChange">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBpChangeRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckUsername">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckUsernameRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateUsername">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCreateUsernameRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptGetBpFromCc">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptGetBpFromCcRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="ZptGetBpFromCc.Exception">
+            <soap:fault name="ZptGetBpFromCc.Exception" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="ZptUploadDocs">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptUploadDocsRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateProspect">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCreateProspectRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptReadBp">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptReadBpRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptActivityCreate">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptActivityCreateRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckMandAndRevocation">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckMandAndRevocationRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptSrList">
+         <soap:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptSrListRequest" style="document" />
+         <wsdl:input>
+            <soap:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:binding name="zbn_crm_portal_soap12" type="tns:ZWS_CRM_PORTAL">
+      <wsp:Policy>
+         <wsp:PolicyReference URI="#BN__zbn_crm_portal_soap12" />
+      </wsp:Policy>
+      <wsoap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+      <wsdl:operation name="ZptAddMail">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptAddMailRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpTypeGet">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBpTypeGetRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBuildingList">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBuildingListRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptServiceRequestCreate">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptServiceRequestCreateRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckProspect">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckProspectRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptDeleteUsername">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptDeleteUsernameRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptBpChange">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptBpChangeRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckUsername">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckUsernameRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateUsername">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCreateUsernameRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptGetBpFromCc">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptGetBpFromCcRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+         <wsdl:fault name="ZptGetBpFromCc.Exception">
+            <wsoap12:fault name="ZptGetBpFromCc.Exception" use="literal" />
+         </wsdl:fault>
+      </wsdl:operation>
+      <wsdl:operation name="ZptUploadDocs">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptUploadDocsRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCreateProspect">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCreateProspectRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptReadBp">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptReadBpRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptActivityCreate">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptActivityCreateRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptCheckMandAndRevocation">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptCheckMandAndRevocationRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+      <wsdl:operation name="ZptSrList">
+         <wsoap12:operation soapAction="urn:sap-com:document:sap:soap:functions:mc-style:ZWS_CRM_PORTAL:ZptSrListRequest" style="document" />
+         <wsdl:input>
+            <wsoap12:body use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <wsoap12:body use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="ZSN_CRM_PORTAL">
+      <wsdl:port name="zbn_crm_portal" binding="tns:zbn_crm_portal">
+         <soap:address location="http://p-crp-a3.teaspa.lan:8037/sap/bc/srt/rfc/sap/zws_crm_portal/100/zsn_crm_portal/zbn_crm_portal" />
+      </wsdl:port>
+      <wsdl:port name="zbn_crm_portal_soap12" binding="tns:zbn_crm_portal_soap12">
+         <wsoap12:address location="http://p-crp-a3.teaspa.lan:8037/sap/bc/srt/rfc/sap/zws_crm_portal/100/zsn_crm_portal/zbn_crm_portal" />
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Implementation-Title: AlpeniteTeaModulisticaPersonal
+Implementation-Version: 1.0-SNAPSHOT
+root-folder: AlpeniteTeaModulisticaPersonal
+Built-By: marziobiancardi
+Specification-Vendor: 
+Created-By: Maven Integration for Eclipse
+Implementation-URL: 
+Implementation-Vendor: 
+package-name: AlpeniteTeaModulisticaPersonal
+module-type: module
+Implementation-Vendor-Id: 
+Build-Jdk: 1.7.0_80
+Specification-Title: AlpeniteTeaModulisticaPersonal
+depends: Default Jahia Templates
+Specification-Version: 1.0-SNAPSHOT
+

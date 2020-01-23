@@ -1,0 +1,23 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:welcomeModule] > jnt:content, jmix:editorialContent, mix:title, jmix:tagged, jmix:basicContent
+- groupAmmCond (string) mandatory
+- groupHelpDesk (string) mandatory
+
+[jnt:loginCustomModule] > jnt:content, mix:title, jmix:formContent
+ - j:displayRememberMeButton (boolean)
+ - paginaRecuperoUtente (weakreference, picker[type="page"]) mandatory < jnt:page 
+ - paginaRecuperoPassword (weakreference, picker[type="page"]) mandatory < jnt:page
+ - paginaRegistrazione (weakreference, picker[type="page"]) mandatory < jnt:page
+ - testoRegistrazione (string, richtext) i18n mandatory
+ 
+[jnt:changeLang] > jnt:content, jmix:editorialContent, jmix:basicContent
+- typeOfDisplay (string,choicelist[resourceBundle]) = nameCurrentLocale mandatory indexed=no < nameCurrentLocale
+ 
+[jnt:helpDeskRedirect] > jnt:content, jmix:basicContent
+- helpDeskGroup (string) mandatory
+- helpDeskPageForward (weakreference, picker[type="page"]) mandatory < jnt:page
+
+[jnt:moreInfoOperator] > jnt:content, jmix:basicContent
+ - groupHelpDeskPath (string) mandatory

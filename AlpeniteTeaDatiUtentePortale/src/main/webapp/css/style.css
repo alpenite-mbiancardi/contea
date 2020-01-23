@@ -1,0 +1,24 @@
+#datiUtentePortaleModifica fieldset {
+    padding: 5px;
+}
+
+#datiUtentePortaleModifica legend {
+    margin: 10px;
+}
+
+#datiUtentePortaleModifica label {
+    display: inline-block;
+    width: 120px;
+}
+
+#datiUtentePortaleModifica input {
+/*    display: block;*/
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#datiUtentePortaleModifica #footer {
+    text-align: center;
+    margin: 10px;
+}
+

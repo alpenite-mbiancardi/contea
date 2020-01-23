@@ -1,0 +1,42 @@
+package org.jahia.modules.templateswebspace.rules
+
+#list any import classes here.
+import org.jahia.services.content.*
+import org.jahia.services.content.rules.*
+import org.jahia.services.render.*
+import org.jahia.services.search.*
+import org.apache.commons.lang.time.*
+import org.slf4j.Logger
+
+expander rules.dsl
+
+#declare any global variables here
+global User user
+global Service service
+global Logger logger
+global SearchURLService urlService
+global RenderContext renderContext
+
+rule "Form as search result hit1"
+  when
+        A search result hit is present
+            - the node is of type jnt:AlpeniteTeaModulistica
+  then
+        Append URL query-parameter "fileRef1" with ((JCRNodeWrapper)searchHit.getRawHit()).getIdentifier()
+end
+
+rule "Form as search result hit2"
+  when
+        A search result hit is present
+            - the node is of type jnt:AlpeniteTeaModulisticaPersonal
+  then
+        Append URL query-parameter "fileRef2" with ((JCRNodeWrapper)searchHit.getRawHit()).getIdentifier()
+end
+
+rule "Form as search result hit3"
+  when
+        A search result hit is present
+            - the node is of type jnt:AlpeniteTeaFAQ
+  then
+        Append URL query-parameter "fileRef3" with ((JCRNodeWrapper)searchHit.getRawHit()).getIdentifier()
+end

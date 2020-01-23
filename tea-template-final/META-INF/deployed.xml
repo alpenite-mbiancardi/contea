@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+  <name>tea-template-final</name>
+  <depends>default, grid, welcomeModule, news, faq, publication, AlpeniteTeaFAQ, AlpeniteTeaModulistica, AlpeniteTeaModulisticaPersonal</depends>
+  <rootFolder>tea-template-final</rootFolder>
+  <version>1.0</version>
+  <build-timestamp>2013-09-18T17:23:22.000+02:00</build-timestamp>
+  <deployment-timestamp>2017-04-04T16:50:20.135+02:00</deployment-timestamp>
+  <package name="tea-template-final.war" path="/usr/share/tomcat6/webapps/ROOT/WEB-INF/var/shared_modules/tea-template-final.war" />
+  <deployed>
+    <file source="META-INF/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF" />
+    <file source="META-INF/MANIFEST.MF" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/MANIFEST.MF" />
+    <file source="META-INF/definitions.cnd" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/definitions.cnd" />
+    <file source="META-INF/deployed.xml" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/deployed.xml" />
+    <file source="META-INF/import.zip" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/import.zip" />
+    <file source="META-INF/rules.drl.disabled" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/rules.drl.disabled" />
+    <file source="META-INF/spring/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/spring" />
+    <file source="META-INF/spring/tea-template-final.xml.disabled" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/META-INF/spring/tea-template-final.xml.disabled" />
+    <file source="css/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/css" />
+    <file source="css/edit.css" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/css/edit.css" />
+    <file source="jnt_template/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/jnt_template" />
+    <file source="jnt_template/html/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/jnt_template/html" />
+    <file source="jnt_template/html/template.tea-template-final.jsp" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/jnt_template/html/template.tea-template-final.jsp" />
+    <file source="resources/" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/resources" />
+    <file source="resources/__resourceBundleName__.properties" destination="/usr/share/tomcat6/webapps/ROOT/modules/tea-template-final/resources/__resourceBundleName__.properties" />
+  </deployed>
+</module>
+

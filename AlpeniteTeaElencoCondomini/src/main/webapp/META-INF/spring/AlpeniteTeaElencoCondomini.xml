@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean class="com.alpenite.tea.elencoCondomini.actions.SelezionaCondominio">
+        <property name="name" value="selezionaCondominio"/>
+    </bean>
+    <bean class="com.alpenite.tea.elencoCondomini.actions.AggiungiCondominioLista">
+        <property name="name" value="aggiungiCondominioLista"/>
+    </bean>
+    <bean class="com.alpenite.tea.elencoCondomini.actions.AggiungiCondomini">
+        <property name="name" value="aggiungiCondomini"/>
+    </bean>
+    <bean class="com.alpenite.tea.elencoCondomini.actions.RimuoviCondomini">
+        <property name="name" value="rimuoviCondomini"/>
+    </bean>
+</beans>

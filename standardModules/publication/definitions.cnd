@@ -1,0 +1,7 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+
+[jnt:publication] > jnt:content, jmix:editorialContent, mix:title, jmix:structuredContent
+ - file (weakreference, picker[type='file']) i18n
+ - title (string) i18n
+ - text (string) i18n
+ - body (string, richtext) i18n

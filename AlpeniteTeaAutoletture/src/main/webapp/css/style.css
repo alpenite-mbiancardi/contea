@@ -1,0 +1,30 @@
+#moduloAutolettura fieldset {
+    padding: 5px;
+}
+
+#moduloAutolettura legend {
+    margin: 10px;
+}
+
+#moduloAutolettura label {
+    display: inline-block;
+    width: 120px;
+}
+
+#moduloAutolettura input {
+/*    display: block;*/
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#moduloAutolettura #footer {
+    text-align: center;
+    margin: 10px;
+}
+
+.obbligatorio.nonCompleto {
+    background-color: salmon;
+}
+.obbligatorio.completo {
+    background-color: lightgreen;
+}

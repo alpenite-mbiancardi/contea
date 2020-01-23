@@ -1,0 +1,16 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:elencoContratti] > jnt:content, jmix:structuredContent
+- visualizzaFiltro (boolean)=true
+- valoreFiltro (string, choicelist[resourceBundle]) = tutto < tutto, tea, acqua, rifiuti, gas
+- paginaContoContrattuale (weakreference)
+- paginaContrattoAcqua (weakreference)
+- paginaContrattoGas (weakreference)
+- paginaContrattoTeleriscaldamento (weakreference)
+- paginaContrattoAmbiente (weakreference)
+- paginaContrattoAqa (weakreference)
+- condominiPage (weakreference, picker[type="page"]) mandatory < jnt:page
+- bpuTest (string)
+- bpcTest (string)
+- paginaContrattoLuce (weakreference)

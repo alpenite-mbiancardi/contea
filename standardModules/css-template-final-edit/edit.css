@@ -1,0 +1,15 @@
+.bodywrapper #slider, .bodywrapper #slider li, .bodywrapper .carousel, .bodywrapper .carousel #slides-container .slide{
+	height:auto !important;
+	margin:0;
+	padding:0;
+	list-style:none
+}
+.bodywrapper #slider ul, .bodywrapper .carousel #slides-container{
+	height:auto !important;
+	margin:0;
+	padding:0;
+}
+.bodywrapper #slider ul img, .bodywrapper #slider2 ul img{
+	max-width:300px;
+	max-height:50px;
+}

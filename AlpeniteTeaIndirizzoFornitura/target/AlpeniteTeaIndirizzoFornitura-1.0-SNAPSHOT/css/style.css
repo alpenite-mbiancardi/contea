@@ -1,0 +1,10 @@
+#indirizzoFornitura .box {
+    display: inline;
+}
+
+.obbligatorio.nonCompleto {
+    background-color: salmon;
+}
+.obbligatorio.completo {
+    background-color: lightgreen;
+}

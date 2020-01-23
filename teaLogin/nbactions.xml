@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-1shot</actionName>
+            <displayName>1shot</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                <goal>jahia:deploy</goal>
+            </goals>
+        </action>
+    </actions>

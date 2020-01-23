@@ -1,0 +1,18 @@
+--uuid:{uuid}
+Content-Type: application/xop+xml; charset=UTF-8; type="text/xml";
+Content-Transfer-Encoding: binary
+Content-ID: <upload@netsw.it>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.api.web.cg.igfs.apps.netsw.it/">
+<soapenv:Body>
+<ser:Fetch>
+<request>
+<apiVersion><![CDATA[{apiVersion}]]></apiVersion>
+<tid><![CDATA[{tid}]]></tid>
+<signature><![CDATA[{signature}]]></signature>
+<batchShopID><![CDATA[{batchShopID}]]></batchShopID>
+</request>
+</ser:Fetch>
+</soapenv:Body>
+</soapenv:Envelope>
+--uuid:{uuid}--

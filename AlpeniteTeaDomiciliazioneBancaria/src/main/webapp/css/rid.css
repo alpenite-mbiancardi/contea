@@ -1,0 +1,164 @@
+#moduloRid {
+    font-family: Arial;
+    font-size: 11px;
+}
+
+#moduloRid .grid_4 {
+    margin-right: 50px;
+    width: 250px;
+    display: inline-block;
+    height: 260px;
+    vertical-align: top;
+}
+
+#moduloRid .grid_4 {
+    margin-right: 50px;
+}
+
+#moduloRid .grid_6 {
+    width: 469px;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+
+#moduloRid .grid_12 {
+    width: 930px;
+}
+
+#moduloRid .boxSuperiore {
+    margin-bottom: 10px;
+}
+
+#moduloRid .logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#moduloRid .logo img {
+    height: 100px;
+}
+
+#moduloRid .checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+/*    border: 1px solid black;*/
+    float: left;
+    margin-right: 10px;
+    background-image: url("../img/checkbox_empty.gif");
+}
+
+#moduloRid .checkboxSelected {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+/*    border: 1px solid black;*/
+    float: left;
+    margin-right: 10px;
+/*    background-color: lightgray;*/
+    background-image: url("../img/checkbox_check.gif");
+}
+
+#moduloRid .boldAcqua {
+    color: blue;
+    font-weight: bold;
+}
+
+#moduloRid .boldEnergia {
+    color: orange;
+    font-weight: bold;
+}
+
+#moduloRid .boldTerritorio {
+    color: green;
+    font-weight: bold;
+}
+
+#moduloRid .scritte, #moduloRid .left, #moduloRid .right {
+    display: inline-block;
+}
+
+#moduloRid .left {
+    width: 80px;    
+}
+
+#moduloRid .container {
+/*    border: 1px solid black;
+    height: 355px;*/
+}
+
+#moduloRid .header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    margin: 2px 2px 2px 2px;
+    font-weight: bold;
+}
+
+#moduloRid .subheader {
+    text-align: center;
+    background-color: lightgray;
+    color: black;
+    padding: 2px;
+    margin: 0px 2px 2px 2px;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+#moduloRid .sezione {
+    padding: 2px;
+}
+
+#moduloRid .testo {
+    text-align: justify;
+    padding: 0px 2px 0px 2px;
+}
+
+#moduloRid .box {
+    border: 1px solid black;
+    display: inline-block;
+    height: 12px;
+    margin: 0px 0px 2px 2px;
+    padding: 1px;
+}
+
+#moduloRid .boxLabel {
+    display: inline-block;
+    height: 12px;
+    margin: 0px 2px 2px 2px;
+    margin-bottom: 0px;
+}
+
+#moduloRid .ibox {
+    border: 1px solid black;
+    border-bottom: 0px;
+    display: inline-block;
+    height: 12px;
+    margin: 0px 0px 2px 2px;
+    font-size: 6px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+#moduloRid .smallbox {
+    border: 1px solid black;
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin: 0px 0px 1px 1px;
+    text-align: center;
+    padding: 1px;
+}
+
+.pdfimage {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+/*    border: 1px solid black;*/
+    float: left;
+    margin-right: 10px;
+/*    background-color: lightgray;*/
+    background-image: url("../img/PDF-icon.jpg");
+}

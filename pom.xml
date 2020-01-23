@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jahia-modules</artifactId>
+        <groupId>org.jahia.modules</groupId>
+        <version>6.6.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.jahia.modules</groupId>
+    <artifactId>modules-installer</artifactId>
+    <name>Modules Installing</name>
+    <packaging>pom</packaging>
+    <version>1.1-SNAPSHOT</version>
+    <properties>
+        <jahia.package.version>1.0</jahia.package.version>
+    </properties>
+    <repositories>
+        <repository>
+            <id>jahia-public</id>
+            <name>Jahia Public Repository</name>
+            <url>https://devtools.jahia.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jahiaRepository</id>
+            <name>Jahia's Maven Repository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jahiaRepository</id>
+            <name>Jahia's Maven Repository</name>
+            <url>http://maven.jahia.org/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <modules>
+		<module>AlpeniteCommon</module>
+		<module>AlpeniteTeaCommunicationLayer</module>
+		<module>Alpenite_DeleteUserMailNV</module>
+		<module>Alpenite_RecuperoPassword</module>
+		<module>Alpenite_RecuperoUsername</module>
+		<module>Alpenite_SbloccoUtente</module>
+		<module>AlpeniteTeaAdvertising</module>
+		<module>AlpeniteTeaAggiuntaContoContrattuale</module>
+		<module>AlpeniteTeaAssociate</module>
+		<module>AlpeniteTeaAutoletture</module>
+		<module>AlpeniteTeaDatiAnagrafici</module>
+		<module>AlpeniteTeaDatiAnagraficiAzienda</module>
+		<module>AlpeniteTeaDatiCatastali</module>
+		<module>AlpeniteTeaDatiUtentePortale</module>
+		<module>AlpeniteTeaDettagliContratto</module>
+		<module>AlpeniteTeaDocumentale</module>
+		<module>AlpeniteTeaDomiciliazioneBancaria</module>
+		<module>AlpeniteTEAElencoContratti</module>
+		<module>AlpeniteTeaElencoDocumenti</module>
+		<module>AlpeniteTeaElencoPratiche</module>
+		<module>AlpeniteTeaFAQ</module>
+		<module>AlpeniteTeaImpersonaBP</module>
+		<module>AlpeniteTeaImpersonaUtente</module>
+		<module>AlpeniteTeaIndirizzoFornitura</module>
+		<module>AlpeniteTeaInvioFattura</module>
+		<module>AlpeniteTeaLettureSvuotamenti</module>
+		<module>AlpeniteTeaModificaDatiPersonali</module>
+		<module>AlpeniteTeaModulistica</module>
+		<module>AlpeniteTeaModulisticaPersonal</module>
+		<module>AlpeniteTeaPager</module>
+		<module>AlpeniteTeaRecapito</module>
+		<module>AlpeniteTeaRicercaStrumenti</module>
+		<module>AlpeniteTeaRichiestaBackOffice</module>
+		<module>AlpeniteTeaTitoloPagina</module>
+		<module>Alpenite_UserRegistration</module>
+		<module>teaLogin</module>
+		<module>welcomeModule</module>
+		<!--><module>AlpeniteTeaElencoCondomini</module>-->
+    </modules>
+</project>

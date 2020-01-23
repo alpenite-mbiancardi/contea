@@ -1,0 +1,12 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:dettagliContrattoGas] > jnt:content, jmix:structuredContent
+
+[jnt:dettagliContrattoAcqua] > jnt:content, jmix:structuredContent
+
+[jnt:dettagliContrattoAmbiente] > jnt:content, jmix:structuredContent
+
+[jnt:dettagliContrattoTeleriscaldamento] > jnt:content, jmix:structuredContent
+
+[jnt:dettagliContrattoElettricita] > jnt:content, jmix:structuredContent

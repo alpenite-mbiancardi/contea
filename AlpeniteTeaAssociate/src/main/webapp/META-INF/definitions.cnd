@@ -1,0 +1,10 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:AlpeniteTeaAssociate] > jnt:content, jmix:basicContent
+- titolo (string) i18n
+- testo (string) i18n
+- immagine (weakreference, picker[type='image']) i18n
+- link (weakreference, picker[type="page"]) < jnt:page
+- externalLink (string) i18n
+- testoLink (string) i18n

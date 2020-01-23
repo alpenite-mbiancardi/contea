@@ -1,0 +1,5 @@
+
+
+<span class="${hit.properties['type'].string}">${hit.properties['type'].string}</span>
+<a href="#1" class="tab">${hit.properties['question'].string}</a>
+<div class="ctn">${hit.properties['answer'].string}</div>

@@ -1,0 +1,33 @@
+<%--<jcr:sql var="nodiResult" sql="SELECT * FROM [jnt:news] WHERE [jnt:news].[jcr:uuid] = '${hit.properties['file'].string}'"/>
+<c:forEach items="${nodiResult.nodes}" var="u">
+    <c:set var="news" value="${u}" />
+</c:forEach> --%>
+
+<%--<p>uuid=${hit.properties['uuid'].string}</p>--%>
+<c:set var="newsTitle" value="${hit.properties['jcr:title'].string}" />
+<c:set var="newsDate"  value="${hit.properties['date']}"      />
+<c:set var="newsDesc"  value="${hit.properties['desc']}"      />
+<c:set var="newsType"  value="${hit.properties['type']}"      />
+<c:set var="newsUrl"	value="${hit.properties['url']}" />
+
+<%-- <jcr:nodeProperty node="${currentNode}" name="image" var="newsImage"/> --%>
+
+ <li class="${newsType.string}">
+	<div class="newsListItem">
+		<c:if test="${not empty newsImage}">
+			<c:url value="${url.files}${newsImage.node.path}" var="imageUrl"/>
+			<div class="newsSummaryImg"><a href="<c:url value='${url.base}${currentNode.path}.html'/>"><img src="${imageUrl}" /></a></div>
+		</c:if>
+		<p class="newsInfo">
+			<span class="newsDate">
+				<fmt:formatDate value="${newsDate.date.time}" pattern="dd/MM/yyyy"/>
+			</span>
+		</p>
+		<h4><fmt:message key="${newsType.string}" /></h4>
+		<h3>${newsTitle}</h3>
+		<p class="newsResume">${fn:substring(functions:removeHtmlTags(newsDesc.string),0,150)}</p>
+		<p>
+        	<a href="${hit.link}" class="link left"><fmt:message key="news.read" /></a>
+		</p>
+	</div>
+</li>

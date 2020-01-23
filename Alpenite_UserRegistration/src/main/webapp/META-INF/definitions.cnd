@@ -1,0 +1,54 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+
+[jnt:alpeniteUserRegistration] > jnt:content, jmix:formContent, mix:title
+ - toAdministrator (boolean)=false autocreated indexed=no
+ - from (string) mandatory
+ - cc (string)
+ - bcc (string)
+ - subject (string) i18n
+ - mail (string, richtext) i18n
+ - userRedirectPage (weakreference, picker[type="page"]) mandatory < jnt:page
+ - verificationPage (weakreference, picker[type="page"]) mandatory < jnt:page 
+ - privacyPage (weakreference, picker[type="page"]) mandatory < jnt:page
+ - condizioniServizioPage (weakreference, picker[type="page"]) mandatory < jnt:page
+ - finalPage (weakreference, picker[type="page"]) mandatory < jnt:page
+ - errorMailForeignVat (string, richtext)
+ 
+[jnt:tempInfo] > jnt:content, jmix:basicContent
+- j:aziendaEnte (string)
+- j:telefono (string)
+- j:cellulare (string)
+- j:paese (string)
+- j:provincia (string)
+- j:comune (string)
+- j:via (string)
+- j:ncivico (string)
+- j:extncivico (string)
+- j:codiceCliente (string)
+- j:codice_fiscale (string)
+- j:ruolo (string)
+- j:partita_iva (string)
+- j:conDati (string)
+- j:conNewsletter (string)
+- j:conTelefono (string)
+- j:conPosta (string)
+- j:ragione_sociale (string)
+- j:cap(string)
+- j:prefissoTel (string)
+- j:prefissoCel (string)
+ 
+[jnt:confirmRegistration] > jnt:content, jmix:basicContent
+- userRedirectPage (weakreference, picker[type="page"]) mandatory < jnt:page
+- okMessage (string) i18n
+- errorMessage (string) i18n
+- backOffice (string) 
+- from (string) mandatory
+- cc (string)
+- bcc (string)
+- subject (string) 
+- mailContent (string, richtext) 
+
+
+[jnt:extraInfo] > jnt:content
+
+[jnt:modifyImpersonatedUser] > jnt:content, jmix:basicContent

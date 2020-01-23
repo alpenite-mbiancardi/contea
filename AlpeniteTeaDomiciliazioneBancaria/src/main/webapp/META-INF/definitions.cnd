@@ -1,0 +1,25 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:domiciliazioneBancaria] > jnt:content, jmix:structuredContent
+- paginaModulo (weakreference) mandatory
+- msgNoRID (string,richtext) i18n
+
+[jnt:moduloRID] > jnt:content, jmix:structuredContent
+
+
+[jnt:uploadMandatoRevoca] > jnt:content, jmix:structuredContent
+- textPage (string,richtext)
+- backReturn (weakreference) mandatory < jnt:page
+- afterConfirmPage (weakreference) mandatory < jnt:page
+ 
+
+[jnt:aggiungiERevocaMandato] > jnt:content, jmix:structuredContent
+- testoMandato (string,richtext) i18n mandatory
+- linkDownloadMandato (string) 
+- paginaAggiungiMandato (weakreference) mandatory < jnt:page
+- testoRevoca (string,richtext) i18n mandatory
+- linkDownloadRevoca (string) 
+- paginaRichiediRevoca (weakreference) mandatory < jnt:page
+
+[jnt:scaricaModulo] > jnt:content, jmix:structuredContent

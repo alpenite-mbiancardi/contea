@@ -1,0 +1,25 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.api.web.cg.igfs.apps.netsw.it/">
+<soapenv:Body>
+<ser:Enquiry>
+<request>
+<apiVersion><![CDATA[{apiVersion}]]></apiVersion>
+<tid><![CDATA[{tid}]]></tid>
+<signature><![CDATA[{signature}]]></signature>
+{shopID}
+{paymentID}
+{tranID}
+{shopUserRef}
+{trType}
+{amount}
+{currencyCode}
+{addInfo1}
+{addInfo2}
+{addInfo3}
+{addInfo4}
+{addInfo5}
+{payInstrToken}
+{topUpID}
+</request>
+</ser:Enquiry>
+</soapenv:Body>
+</soapenv:Envelope>

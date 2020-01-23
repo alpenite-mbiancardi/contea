@@ -1,0 +1,15 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:AlpeniteTeaModulistica] > jnt:content, jmix:editorialContent, jmix:structuredContent
+ - title    (string) i18n
+ - subtitle (string) i18n
+ - file     (weakreference, picker[type='file']) i18n
+ - type     (string, choicelist[resourceBundle]) mandatory < luce,acqua,tlr,rifiuti,gas,servizio,pozzo,generali,scadenzario,igiene
+ - comune	(string, choicelist[resourceBundle]) multiple  <  "Acquanegra Sul Chiese","Asola","Bagnolo San Vito","Bigarello","Borgo Virgilio","Borgofranco Sul Po","Botticino","Bozzolo","Canneto Sull'Oglio","Carbonara Di Po","Casalmoro","Casaloldo","Casalromano","Castel d'Ario","Castel Goffredo","Castellucchio","Castiglione delle Stiviere","Cavriana","Ceresara","Commessaggio","Castelbelforte","Curtatone","Dosolo","Felonica","Gazoldo Degli Ippoliti","Gazzuolo","Goito","Gonzaga","Guidizzolo","Magnacavallo","Mantova","Marcaria","Mariana Mantovana","Marmirolo","Medole","Moglia","Monzambano","Motteggiana","Ostiglia","Pegognana","Pieve Di Coriano","Piubega","Poggio Rusco","Pomponesco","Ponti Sul Mincio","Porto Mantovano","Quingentole","Quistello","Redondesco","Revere","Rivarolo Mantovano","Rodigo","Roncoferraro","Roverbella","Sabbioneta","San Benedetto Po","San Giacomo Delle Segnate","San Giorgio Di Mantova","San Giovanni Del Dosso","San Martino Dall'Argine","Schivenoglia","Sermide","Serravalle a Po","Solferino","Sustinente","Suzzara","Viadana","Villa Poma","Villimpenta","Volta Mantovana"
+ 
+[jnt:AlpeniteTeaModulisticaRss] > jnt:content, jmix:queryContent,jmix:siteComponent
+- contenitoreModuli (weakreference)
+
+[jnt:AlpeniteTeaNewsRss] > jnt:content, jmix:queryContent,jmix:siteComponent
+- contenitoreModuli (weakreference)

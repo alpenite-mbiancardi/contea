@@ -1,0 +1,45 @@
+#datiCatastali #header {
+    font-weight: bold;
+}
+
+#datiCatastali .label, #datiCatastali .dati {
+    display: inline-block;
+}
+
+#datiCatastali .label {
+    font-weight: bold;
+    width: 180px;
+    border-right: 1px solid black;
+    margin-right: 5px;
+}
+
+#moduloDatiCatastali fieldset {
+    padding: 5px;
+}
+
+#moduloDatiCatastali legend {
+    margin: 10px;
+}
+
+#moduloDatiCatastali label {
+    display: inline-block;
+    width: 120px;
+}
+
+#moduloDatiCatastali input {
+/*    display: block;*/
+    width: 200px;
+    margin-bottom: 5px;
+}
+
+#moduloDatiCatastali #footer {
+    text-align: center;
+    margin: 10px;
+}
+
+.obbligatorio.nonCompleto {
+    background-color: salmon;
+}
+.obbligatorio.completo {
+    background-color: lightgreen;
+}

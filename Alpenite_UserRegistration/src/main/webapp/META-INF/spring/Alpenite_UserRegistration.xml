@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean class="org.jahia.userregistration.NewUser">
+        <property name="name" value="newJahiaUser"/>
+        <property name="userManagerService" ref="JahiaUserManagerService"/>
+        <property name="mailService" ref="MailService"/>
+	</bean>
+	<bean class="org.jahia.userregistration.GetComuni">
+        <property name="name" value="getComuni"/>
+        <property name="requireAuthenticatedUser" value="false"/>
+	</bean>
+	<bean class="org.jahia.userregistration.ConfirmRegistration">
+        <property name="name" value="confirmRegistration"/>
+        <property name="userManagerService" ref="JahiaUserManagerService"/>
+        <property name="requireAuthenticatedUser" value="false"/>
+        <property name="mailService" ref="MailService"/>
+	</bean>
+	<bean class="org.jahia.userregistration.CheckUsername">
+        <property name="name" value="checkUsername"/>
+        <property name="userManagerService" ref="JahiaUserManagerService"/>
+        <property name="requireAuthenticatedUser" value="false"/>
+	</bean>
+	<bean class="org.jahia.userregistration.GetCap">
+        <property name="name" value="getCap2"/>
+        <property name="requireAuthenticatedUser" value="false"/>
+	</bean>
+	<bean class="org.jahia.userregistration.UserModify">
+		<property name="name" value="userModify"/>
+		<property name="userManagerService" ref="JahiaUserManagerService"/>
+        <property name="mailService" ref="MailService"/>
+	</bean>
+	<bean class="org.jahia.userregistration.regmassiva.RegMassiva">
+        <property name="name" value="RegMassiva"/>
+        <property name="requireAuthenticatedUser" value="true"/>
+        <property name="userManagerService" ref="JahiaUserManagerService"/>        
+	</bean>
+</beans>
+
+    

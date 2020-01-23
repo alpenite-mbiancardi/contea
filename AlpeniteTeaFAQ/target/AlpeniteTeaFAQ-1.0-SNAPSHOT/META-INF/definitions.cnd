@@ -1,0 +1,7 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:AlpeniteTeaFAQ] > jnt:content, jmix:editorialContent, mix:title, jmix:structuredContent
+ - question (string) i18n
+ - answer   (string, richtext) i18n
+ - type     (string, choicelist[resourceBundle]) < luce,acqua,tlr,rifiuti,gas,servizio,pozzo,generali,scadenzario,igiene

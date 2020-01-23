@@ -1,0 +1,7 @@
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+
+[jnt:impersonaUtente] > jnt:content, jmix:structuredContent
+ - userRedirectPage (weakreference, picker[type="page"]) mandatory < jnt:page
+ - group (string) mandatory
+ - groupAmmCond (string) mandatory
