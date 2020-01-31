@@ -32,8 +32,8 @@
                 <div class="grid_5"><div class="site"><em>Il sito del gruppo Tea</em> <a href="/" class="arrow">Visita</a></div></div>
                 <div class="grid_8"><div class="nolog"></div></div>
                 <div class="grid_3"><div class="lang"><em>Italiano</em></div></div>
-            </div>   
-        </div>   
+            </div>
+        </div>
         <div class="container_16">
            <div class="grid_5"><div id="logo"><a href="#1" title="ConTea - Sportello online">ConTea - Sportello online</a></div></div>
            <div class="grid_11">
@@ -45,16 +45,16 @@
             </div>
         </div>
     </div>
-    
+
     <div id="content">
     	<div class="container_16">
         	<div class="bg6">
                 <div class="grid_5 colsx">
                     <div class="navbar">
                         <ul class="navmenu level_1">
-							
+
 						</ul>
-                    </div>     
+                    </div>
                     <div class="box" id="contact">
                     	<h2>Contattaci</h2>
                         <div class="ctn">
@@ -62,20 +62,20 @@
                             <p>Gruppo Tea S.p.A.<br />
 via Taliercio, 3 - Mantova 46100<br />
 Centralino: <strong>376 4121</strong></p>
-<h3>PER INFORMAZIONI, 
+<h3>PER INFORMAZIONI,
 preventivi e CONTRATTI</h3>
 <p>Numero verde: <strong>800 473165 </strong><br />
 Per chi chiama da cellulare: <strong>199 4121 </strong><br />
-(servizio con operatore attivo dal lunedì al venerdì dalle 8.30 alle 18.00)
+(servizio con operatore attivo dal lunedï¿½ al venerdï¿½ dalle 8.30 alle 18.00)
 E-mail: <a href="mailto:clienti@teaspa.it">clienti@teaspa.it</a></p>
                         </div>
                 		<div class="close"></div>
-                	</div>             
-               </div> 
+                	</div>
+               </div>
                <div class="grid_11 main">
                     <div class="title">
                         <h1><fmt:message key="label.error"/></h1>
-                    </div>                          
+                    </div>
                     <div class="txt"><p>&nbsp;</p>
                     </div>
 				</div>
@@ -86,14 +86,14 @@ E-mail: <a href="mailto:clienti@teaspa.it">clienti@teaspa.it</a></p>
             <h3 class="loginIcon"><fmt:message key="label.login"/></h3>
             <br class="clearFloat" />
         <ui:isLoginError var="loginResult">
-          <span class="error"><fmt:message key="${loginResult == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
+          <span class="error"> <fmt:message key="${loginResult == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/></span>
         </ui:isLoginError>
-	
+
         <table cellspacing="1" cellpadding="0" border="0" class="formTable data">
             <tbody>
             <tr>
                 <th><fmt:message key="label.username"/></th>
-                <td><input type="text" value="" style="width: 150px;" tabindex="1" maxlength="250" size="13" name="username"/></td>
+                <td><input type="text" value="" style="width: 150px;" tabindex="1" maxlength="250" size="13" id="username" name="username" onkeyup="this.value = this.value.toUpperCase();"/></td>
             </tr>
             <tr>
                 <th><fmt:message key="label.password"/></th>
@@ -101,7 +101,7 @@ E-mail: <a href="mailto:clienti@teaspa.it">clienti@teaspa.it</a></p>
             </tr>
             </tbody>
         </table>
-	
+
         <c:if test="${not fn:contains(param.redirect, '/administration')}">
         <br/>
         <table align="center" width="100%" cellspacing="5">
@@ -136,3 +136,13 @@ E-mail: <a href="mailto:clienti@teaspa.it">clienti@teaspa.it</a></p>
 	</div>
 </body>
 </html>
+
+<script>
+    $( document ).ready(function() {
+        $( "#username" ).keyup(function() {
+            if ($(this).val() === 'ROOT' || $(this).val() === 'root'){
+                $(this).val('root');
+            }
+        });
+    });
+</script>

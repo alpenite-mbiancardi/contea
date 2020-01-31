@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
     This file is part of Jahia, next-generation open source CMS:
-    Jahia's next-generation, open source CMS stems from a widely acknowledged vision 
-    of enterprise application convergence - web, search, document, social and portal - 
-    unified by the simplicity of web content management. 
+    Jahia's next-generation, open source CMS stems from a widely acknowledged vision
+    of enterprise application convergence - web, search, document, social and portal -
+    unified by the simplicity of web content management.
 
     For more information, please visit http://www.jahia.com.
 
@@ -30,17 +30,17 @@
     describing the FLOSS exception, and it is also available here:
     http://www.jahia.com/license
 
-    Commercial and Supported Versions of the program (dual licensing): 
+    Commercial and Supported Versions of the program (dual licensing):
     alternatively, commercial and supported versions of the program may be used
-    in accordance with the terms and conditions contained in a separate 
+    in accordance with the terms and conditions contained in a separate
     written agreement between you and Jahia Solutions Group SA.
-    
-    If you are unsure which license is appropriate for your use, 
+
+    If you are unsure which license is appropriate for your use,
     please contact the sales department at sales@jahia.com.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -51,7 +51,7 @@
     <groupId>org.jahia.modules</groupId>
     <artifactId>AlpeniteTeaImpersonaUtente</artifactId>
     <name>AlpeniteTeaImpersonaUtente</name>
-    <version>1.0-SNAPSHOT</version>    
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <description>This is the custom module (AlpeniteTeaImpersonaUtente) for running on a Jahia server.</description>
     <repositories>
@@ -79,20 +79,20 @@
                     <warSourceExcludes>resources/*.properties</warSourceExcludes>
                     <webResources>
                         <resource>
-                          <directory>${project.build.directory}/native2ascii</directory>
-                          <targetPath>resources</targetPath>
+                            <directory>${project.build.directory}/native2ascii</directory>
+                            <targetPath>resources</targetPath>
                         </resource>
                     </webResources>
                     <archive>
                         <manifestEntries>
-		                	<Implementation-Title>${project.name}</Implementation-Title>
-		                    <Implementation-Version>${project.version}</Implementation-Version>
-		                    <Implementation-Vendor></Implementation-Vendor>
-		                    <Implementation-Vendor-Id></Implementation-Vendor-Id>
-		                    <Implementation-URL></Implementation-URL>
-		                    <Specification-Title>${project.name}</Specification-Title>
-		                    <Specification-Version>${project.version}</Specification-Version>
-		                    <Specification-Vendor></Specification-Vendor>
+                            <Implementation-Title>${project.name}</Implementation-Title>
+                            <Implementation-Version>${project.version}</Implementation-Version>
+                            <Implementation-Vendor></Implementation-Vendor>
+                            <Implementation-Vendor-Id></Implementation-Vendor-Id>
+                            <Implementation-URL></Implementation-URL>
+                            <Specification-Title>${project.name}</Specification-Title>
+                            <Specification-Version>${project.version}</Specification-Version>
+                            <Specification-Vendor></Specification-Vendor>
                             <package-name>${project.name}</package-name>
                             <depends>Default Jahia Templates</depends>
                             <root-folder>${artifactId}</root-folder>
@@ -104,12 +104,18 @@
             </plugin>
         </plugins>
     </build>
-        <dependencies>
-    	<dependency>
-    		<groupId>${project.groupId}</groupId>
-    		<artifactId>AlpeniteTeaCommunicationLayer</artifactId>
-    		<version>${project.version}</version>
-    		<scope>provided</scope>
-    	</dependency>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>AlpeniteTeaCommunicationLayer</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jahia.modules</groupId>
+            <artifactId>Alpenite_UserRegistration</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

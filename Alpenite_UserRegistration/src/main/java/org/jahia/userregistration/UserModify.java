@@ -33,27 +33,27 @@ public class UserModify extends Action {
 	private static final Logger LOG = org.slf4j.LoggerFactory.getLogger(UserModify.class);
 	private JahiaUserManagerService userManagerService;
 	private MailService mailService;
-	
-	
+
+
 	@Override
 	public ActionResult doExecute(HttpServletRequest req,RenderContext renderContext, Resource resource,JCRSessionWrapper session, Map<String, List<String>> parameters,URLResolver urlResolver) throws Exception {
-		LOG.debug("Entering action: \""+this.getName()+"\"");
+		LOG.debug("ALPENITE UserModify - Entering action: \""+this.getName()+"\"");
 		boolean changed = false;
 		HttpSession httpSession              = req.getSession();
 		String      impersonaUtenteMessaggio = "";
 		String      username                 = (String) httpSession.getAttribute(Constants.USER_IMPERSONATED);
-		
+
 		//Get Parameters
 		if(username==null||username.length()==0){
 			impersonaUtenteMessaggio = com.alpenite.tea.communicationLayer.data.Constants.ERRORE_GENERICO; //no username impersonated
-			LOG.error("No username impersonated");
+			LOG.error("ALPENITE UserModify - No username impersonated");
 			return new ActionResult(ActionResult.OK.getResultCode(),req.getHeader("referer"));
 		}
-		
+
 		JahiaUser userImpersonated = ServicesRegistry.getInstance().getJahiaUserManagerService().lookupUser(username);
 		if(userImpersonated==null){
 			impersonaUtenteMessaggio = com.alpenite.tea.communicationLayer.data.Constants.ERRORE_GENERICO; //no username impersonated
-			LOG.error("No username impersonated");
+			LOG.error("ALPENITE UserModify - No username impersonated");
 			return new ActionResult(ActionResult.OK.getResultCode(),req.getHeader("referer"));
 		}
 		String workspace = session.getWorkspace().getName();
@@ -61,8 +61,9 @@ public class UserModify extends Action {
 		changed|=modificaEmail(userImpersonated, req, renderContext, resource, rootSession, parameters, urlResolver);
 		boolean mailChanged = changed;
 		changed|=modificaDatiDocumentale(userImpersonated, parameters);
-		
+
 		if(changed){
+			LOG.error("ALPENITE UserModify - Changed true");
 			rootSession.getNode(userImpersonated.getLocalPath()).saveSession();
 			rootSession.save();
 			//session.refresh(false);
@@ -89,9 +90,10 @@ public class UserModify extends Action {
 	}
 
 	private boolean modificaEmail(JahiaUser user, HttpServletRequest req,RenderContext renderContext, Resource resource,JCRSessionWrapper session, Map<String, List<String>> parameters,URLResolver urlResolver) throws Exception{
+		LOG.info("ALPENITE UserModify - modifica Email");
 		boolean result = false;
 		String newEmail = getParameter(parameters, Constants.MAIL, "");
-		
+
 		if(!newEmail.equals("")&&(user.getProperty("j:email")==null||!user.getProperty("j:email").equals(newEmail))){
 			modifyActionPreparation(newEmail,user,parameters,req.getHeader("referer"));
 			result=true;
@@ -99,7 +101,7 @@ public class UserModify extends Action {
 		}
 		return result;
 	}
-	
+
 	private void modifyActionPreparation(String newEmail,JahiaUser user,Map<String, List<String>> parameters,String referer){
 		List<String> listaParametri = new ArrayList<String>();
 		//Adattamento parameters
@@ -120,15 +122,16 @@ public class UserModify extends Action {
 		user.setProperty(Constants.CODICEVERIFICA, codiceDiVerifica);
 		user.setProperty(Constants.NUOVAMAIL, newEmail);
 	}
-	
+
 	private boolean modificaDatiDocumentale(JahiaUser user,Map<String, List<String>> parameters){
+		LOG.info("ALPENITE UserModify - modificaDatiDocumentale");
 		boolean result = false;
 		List<String> comuni        = new ArrayList<String>();
 		List<String> documentTypes = new ArrayList<String>();
-		
+
 		comuni=parameters.get("comuni");
 		documentTypes=parameters.get("tipiDocumento");
-		
+
 		if(comuni!=null&&documentTypes!=null){
 			Collections.sort(comuni);
 			Collections.sort(documentTypes);
@@ -145,7 +148,7 @@ public class UserModify extends Action {
 				user.setProperty("j:listaTipiDocumentoDocumentale", listaDocumentTypes);
 			}
 		}
-		
+
 		return result;
 	}
 
